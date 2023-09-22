@@ -1,0 +1,6 @@
+search through a[0] to a[n-2]
+if a[i] > a[i+1]
+    swap 
+    print
+else 
+    leave
