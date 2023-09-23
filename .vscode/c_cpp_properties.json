@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe", // Replace with your actual MSVC compiler path
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64", // Use "msvc-x64" for MSVC
+            "browse": {
+                "path": ["${workspaceFolder}"],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
+ }
+ 
