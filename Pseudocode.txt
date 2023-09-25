@@ -1,5 +1,30 @@
-search thru for min(num) array from 0 to -1
+Partition(array, size, low ind,high ind)
+    comparing form low to high
+    i = (low - 1)
+    k = high
+    pivot = a[k]
+    for j = low, j <= size-1 j++
+        if a[j] <= pivot
+        i++;
+        if i = j
+            continue
+        swap(i, j)
+        print_array
+swap(array, i+1, high)
+print_array
+return i + 1
 
-insert in the first array
-search again from 1 to -1
-insert in 2nd index
+quicksort(arr, size, low, high)
+if low >= high or low < 0
+    return;
+pivot ind = Partition(ar, size, low, high)
+quicksort(arr, size, low, p-1)
+quicksort(arr, size, p+1, high)
+
+qic(arr)
+
+low = first_index
+high = size - 1
+if size < 2
+    return;
+quicksort(arr, size, low, high)
