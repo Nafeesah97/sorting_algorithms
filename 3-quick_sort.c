@@ -19,7 +19,8 @@ void swap_array(int *array, size_t first_index, size_t second_index)
 }
 
 /**
- *  partition_arr - a function to partition the list of array
+ * partition_arr - a function to partition the list of array
+ * @array: list of integers
  * @size: size of array
  * @low_ind: lowest index of partion area
  * @high_ind: highest index of partition area
@@ -33,7 +34,7 @@ int partition_arr(int *array, size_t size, size_t low_ind, size_t high_ind)
 
 	i = low_ind - 1;
 	pivot = array[high_ind];
-	for(j = low_ind; j <= high_ind - 1; j++)
+	for (j = low_ind; j <= high_ind - 1; j++)
 	{
 		if (array[j] <= pivot)
 		{
@@ -46,7 +47,7 @@ int partition_arr(int *array, size_t size, size_t low_ind, size_t high_ind)
 	}
 	if ((i + 1) != high_ind)
 	{
-		swap_array(array, i+1, high_ind);
+		swap_array(array, i + 1, high_ind);
 		print_array(array, size);
 	}
 	return (i + 1);
