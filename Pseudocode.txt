@@ -1,23 +1,5 @@
+search thru for min(num) array from 0 to -1
 
-lists = list
-current = lists
-while c is not null
-    next-node = c-next
-    if c-n > next-n
-        move next-n till next-n > c-n
-        print
-    c = next-node
-
-moving(lists, n1(c-n), n2(next-n))
-if n1-prev is not null
-    n1-prev-next = n2
-else
-    list = n2
-if n2-next is not null
-    n2-next-prev = n1
-
-n1-next = n2-next
-n2-prev = n1-prev
-n1-prev = n2
-n2-next = n1
-
+insert in the first array
+search again from 1 to -1
+insert in 2nd index
