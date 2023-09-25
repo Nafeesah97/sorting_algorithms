@@ -11,7 +11,7 @@ void swap_array(int *array, size_t first_index, size_t second_index)
 {
 	int temp;
 
-	if (array[first_index] == array[second_index])
+	if (first_index == second_index)
 		return;
 	temp = array[first_index];
 	array[first_index] = array[second_index];
@@ -26,21 +26,18 @@ void swap_array(int *array, size_t first_index, size_t second_index)
  * Return: the index of partition point
  */
 
-size_t partition_arr(int *array, size_t size, size_t low_ind, size_t high_ind)
+int partition_arr(int *array, size_t size, size_t low_ind, size_t high_ind)
 {
-	size_t i, j, k;
+	size_t i, j;
 	int pivot;
 
 	i = low_ind - 1;
-	k = high_ind;
-	pivot = array[k];
+	pivot = array[high_ind];
 	for(j = low_ind; j <= high_ind - 1; j++)
 	{
 		if (array[j] <= pivot)
 		{
 			i++;
-			if (i == j)
-				continue;
 			swap_array(array, i, j);
 			print_array(array, size);
 		}
@@ -60,7 +57,7 @@ size_t partition_arr(int *array, size_t size, size_t low_ind, size_t high_ind)
 
 void sorting(int *array, size_t size, size_t low_ind, size_t high_ind)
 {
-	size_t p_ind;
+	int p_ind;
 
 	if (low_ind < high_ind)
 	{
@@ -79,11 +76,7 @@ void sorting(int *array, size_t size, size_t low_ind, size_t high_ind)
 
 void quick_sort(int *array, size_t size)
 {
-	size_t low_ind, high_ind;
-
 	if (size < 2)
 		return;
-	low_ind = 0;
-	high_ind = size - 1;
-	sorting(array, size, low_ind, high_ind);
+	sorting(array, size, 0, size - 1);
 }

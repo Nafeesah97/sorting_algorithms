@@ -11,7 +11,7 @@ void swap_array(int *array, size_t first_index, size_t second_index)
 {
 	int temp;
 
-	if (array[first_index] == array[second_index])
+	if (first_index == second_index)
 		return;
 	temp = array[first_index];
 	array[first_index] = array[second_index];
